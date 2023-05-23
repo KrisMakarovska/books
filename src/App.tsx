@@ -1,5 +1,6 @@
+/* eslint-disable no-var */
 import { Navigate, Route, Routes } from "react-router-dom";
-import './index.scss';
+import "./index.scss";
 
 import booksFromServer from "./api/booksFromServer.json";
 import { Book } from "./types/Book";
@@ -11,7 +12,10 @@ import { Home } from "./components/HomeComponent/Home";
 import { useLocalStorage } from "./api/localStorage";
 
 export const App = () => {
-  const [booksToShow, setBooksToShow] = useLocalStorage('book', booksFromServer);
+  const [booksToShow, setBooksToShow] = useLocalStorage(
+    "book",
+    booksFromServer
+  );
 
   const actionBooks = (action: string, book: Book) => {
     switch (action) {

@@ -17,10 +17,12 @@ export const EditForm = ({ actionBooks }: Props) => {
   const [editedBook, setEditedBook] = useState<Book>(location.state?.book);
   // const [validationModal, setValidationModal] = useState(false);
   const [disabledButton, setDisabledButton] = useState(false);
-
+  console.log(location.state)
   useEffect(() => {
     setEditedBook(location.state?.book);
   }, [location]);
+
+
 
   const { name, author, published } = editedBook;
 

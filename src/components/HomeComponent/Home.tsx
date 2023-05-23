@@ -16,7 +16,6 @@ export const Home = ({ actionBooks, booksToShow }: Props) => {
   const myRef = useRef<HTMLDivElement>(null);
 
   const location = useLocation();
-  console.log(location)
 
   useEffect(() => {
     if (location.hash === "#bottom" && myRef.current !== null) {
